@@ -1,4 +1,4 @@
-# BotWow
+# CreateHordePJWoW — BotWow
 
 **BotWow keeps trying to create a Horde character on a PvP (JcJ) realm in WoW Forever until it works.**
 
