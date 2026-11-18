@@ -1,10 +1,15 @@
 # CreateHordePJWoW — BotWow
 
-**BotWow keeps trying to create a Horde character on a PvP (JcJ) realm in WoW Forever until it works.**
+**BotWow keeps trying to create a Horde character on the PvP ruleset (*"JcJ"*) in WoW Forever until it works.**
 
 When a faction is too full, World of Warcraft: Forever refuses new characters with a
-"faction imbalance" error. BotWow retries for you, over and over, until the character
+"faction imbalance" error (*"Esta facción no está disponible con este conjunto de reglas
+debido a un desequilibrio de población."* — "This faction is not available with this ruleset due
+to a population imbalance"). BotWow retries for you, over and over, until the character
 is created. Then it stops.
+
+> Words in *"quotes and italics"* are the **Spanish texts shown in the game or Battle.net**
+> (the bot works with the Spanish client), followed by their English meaning.
 
 > ⚠️ Unofficial tool. Read the [disclaimer](#disclaimer) before using it.
 
@@ -30,11 +35,11 @@ is created. Then it stops.
 
 BotWow looks at the screen and clicks for you, one step at a time:
 
-1. Presses **Jugar** (Play) in Battle.net to start WoW.
-2. Chooses the **PvP ruleset (JcJ)**.
-3. Chooses **Horde → Troll → Rogue**, **male** body.
+1. Presses *"Jugar"* (Play) in Battle.net to start WoW.
+2. Opens *"Conjunto de reglas"* (Ruleset) and chooses *"JcJ"* (PvP).
+3. Chooses *"Horda"* (Horde) → *"Trol"* (Troll) → *"Pícaro"* (Rogue), male body, then *"Personalizar"* (Customize).
 4. Types a **random name**.
-5. Presses **Terminar** (Finish).
+5. Presses *"Terminar"* (Finish).
 6. If the **faction imbalance error** appears: closes WoW and starts again from step 1.
 7. When the character is **created**: stops and leaves WoW open.
 
@@ -44,7 +49,7 @@ There are no fixed timers between screens: every step waits for the right screen
 
 - **Windows 10 or 11.**
 - **Battle.net** open and logged in, with **World of Warcraft: Forever** selected
-  (the blue **Jugar** button visible).
+  (the blue *"Jugar"* (Play) button visible).
 - WoW client in **Spanish** (the bot reads the Spanish texts on screen).
 - A **16:9** screen or window (for example 1920×1080, 2560×1440 or 1600×900).
 - **Any** WoW UI scale works.
@@ -91,7 +96,7 @@ attempts and the name it will use.
 
 ## Test mode (--dry-run)
 
-Test mode does everything **except pressing Terminar**, so no character is created.
+Test mode does everything **except pressing *"Terminar"*** (Finish), so no character is created.
 Use it to check that the bot works on your PC.
 
 - **Exe:** right-click BotWow.exe → **Create shortcut**. Right-click the shortcut →
@@ -100,23 +105,23 @@ Use it to check that the bot works on your PC.
 - **Source:** open a terminal in the folder and run
   `python loop.py --autostart --dry-run` (or `start.bat --dry-run`).
 
-It stops with "dry run: everything ready, Terminar NOT pressed".
+It stops with `dry run: everything ready, Terminar NOT pressed`.
 
 ## When does it stop?
 
 **It stops (and beeps) when:**
 
-- After Terminar, the **character list** appears: the character was most likely
+- After *"Terminar"*, the **character list** appears: the character was most likely
   **created**. Check the game.
-- After Terminar, nothing happens for 30 seconds.
-- After Terminar, an unknown message appears 20 times in a row.
+- After *"Terminar"*, nothing happens for 30 seconds.
+- After *"Terminar"*, an unknown message appears 20 times in a row.
 
 It also stops when you press **F9** (or close the window).
 
 **It closes WoW and tries again when:**
 
 - The faction imbalance error appears (the normal case).
-- An unknown message appears after Terminar (for example, the name is taken: it
+- An unknown message appears after *"Terminar"* (for example, the name is taken: it
   picks a new random name).
 - A screen stays unknown or stuck for 5 minutes (loading, queue, frozen game).
 
@@ -134,7 +139,7 @@ If that folder is read-only, they go to `%LOCALAPPDATA%\BotWow` instead.
 | Problem | Try this |
 | --- | --- |
 | "Battle.net window not found" | Open Battle.net and keep its window open (not only in the tray). |
-| "Jugar button is not ready" | Select WoW: Forever in Battle.net and wait for updates to finish. |
+| "Battle.net *"Jugar"* button is not ready" | Select WoW: Forever in Battle.net and wait for updates to finish. |
 | Red warning about the language | Switch the WoW client to Spanish (esES). |
 | Red warning about the window size | Use a 16:9 resolution, at least 1600×900. |
 | start.bat says Python was not found | Reinstall Python 3.12 and tick "Add python.exe to PATH". |
