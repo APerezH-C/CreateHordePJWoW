@@ -1,0 +1,9 @@
+# Build output
+dist/
+build/
+__pycache__/
+*.pyc
+
+# Files the bot writes next to itself
+loop.log
+captures/

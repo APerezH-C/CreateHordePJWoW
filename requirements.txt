@@ -1,0 +1,2 @@
+# Requirements to run BotWow from source (start.bat installs them).
+pillow==12.1.1
